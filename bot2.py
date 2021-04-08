@@ -7,11 +7,13 @@ class Bot(ChatBot):
         super().__init__(name, **kwargs)
         self.trainer = ListTrainer(self)
 
+
     def listTraining(self, name_list):
         with open(f'treinos/{name_list}.txt', 'r') as _file:
             training = _file.readlines()
             statements = [re.sub(r'\n', '', statement) for statement in training]
             return self.trainer.train(statements)
+
 
     def searchReplaceGuilherme(self, statement):
         possibleNames = re.compile(r'(G|g)(u|i)i?l[he]e?(rme|rmi|me)')
@@ -20,9 +22,24 @@ class Bot(ChatBot):
         else:
             return statement
 
+
+    def removeSpecialCharacters(self, statement):
+        remove = re.compile(f'/[^a-zA-Z ]/g')
+        if remove.search(statement):
+            return re.sub(remove, '', statement)
+        else:
+            return statement
+
+
+    def filterStatement(self, statement):
+        statementClean = self.removeSpecialCharacters(statement)
+        return self.searchReplaceGuilherme(statementClean)
+
+
 if __name__ == '__main__':
     serverBot = Bot(
         name='ServerBot',
+        read_only=False,
         preprocessors=[
                 'chatterbot.preprocessors.clean_whitespace',
                 'chatterbot.preprocessors.convert_to_ascii',
@@ -30,17 +47,18 @@ if __name__ == '__main__':
         logic_adapters=[
             {
                 'import_path': 'chatterbot.logic.BestMatch',
-                'default_response': 'Não entendi o que você está falando.',
-                'maximum_similarity_threshold': 0.8,
+                'maximum_similarity_threshold': 0.95,
+                'default_response': 'Não entendi o que você perguntou.',
             },
         ],
     )
     serverBot.listTraining('lista')
-
+    print('Olá, eu sou o chatbot.')
     while True:
         try:
-            clientStatement = serverBot.get_response(serverBot.searchReplaceGuilherme(input().capitalize()))
+            clientStatement = serverBot.get_response(serverBot.filterStatement(input().capitalize()))
             print(clientStatement)
+            print(clientStatement.confidence)
 
         except(KeyboardInterrupt, EOFError, SystemExit):
             break
