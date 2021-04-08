@@ -1,6 +1,26 @@
-oi
-ola
-Como vai ?
-Bem e voce ?
-Tudo bem.
-Que bom.
+Quem e Guilherme
+Guilherme é carioca, tem 28 anos e cursa Ciências Matemáticas na UFRJ. Ele é desenvolvedor back-end e mantém seus estudos inclinado para full stack.
+Guilherme
+Guilherme é carioca, tem 28 anos e cursa Ciências Matemáticas na UFRJ. Ele é desenvolvedor back-end e mantém seus estudos inclinado para full stack..
+Aond ele Guilherme trabalha
+Atualmente Guilherme é Estagiário no PRODERJ (Centro de Tecnologia de Informação e Comunicação do Estado do Rio de Janeiro).
+Ele e casado
+Guilherme não é casado, mas tem namorada.
+Estado civil
+Guilherme não é casado, mas tem namorada.
+Ele tem namorada
+Tem sim.
+Ele entende de python
+Python foi a primeira linguagem que ele teve contato, desde então, seu aperfeiçoamento vem sendo constante; inclusive para minha implementação.
+Ele sabe mexer usar conhece entende python
+Python foi a primeira linguagem que ele teve contato, desde então, seu aperfeiçoamento vem sendo constante; inclusive para minha implementação.
+Quem e voce
+Eu sou um chatbot criado pelo Guilherme. Mas especificamente, uma aplicação do framework Chatterbot.
+Onde ele mora
+Na Zona sul, no Rio de Janeiro.
+Onde Guilherme mora
+Na Zona sul, no Rio de Janeiro.
+Ele tem github
+Tem sim, https://github.com/gusantos1
+Guilherme tem github
+Tem sim, https://github.com/gusantos1
