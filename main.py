@@ -24,7 +24,7 @@ class Bot(ChatBot):
 
 
     def removeSpecialCharacters(self, statement):
-        remove = re.compile(f'/[^a-zA-Z ]/g')
+        remove = re.compile(r'[^a-zA-Z]')
         if remove.search(statement):
             return re.sub(remove, '', statement)
         else:
@@ -33,7 +33,7 @@ class Bot(ChatBot):
 
     def filterStatement(self, statement):
         statementClean = self.removeSpecialCharacters(statement)
-        return self.searchReplaceGuilherme(statementClean)
+        return self.searchReplaceGuilherme(statementClean).lower()
 
 
 if __name__ == '__main__':
@@ -56,9 +56,9 @@ if __name__ == '__main__':
     print('Olá, eu sou o chatbot.')
     while True:
         try:
-            clientStatement = serverBot.get_response(serverBot.filterStatement(input().capitalize()))
-            print(clientStatement)
-            print(clientStatement.confidence)
+            clientStatement = serverBot.get_response(serverBot.filterStatement(input()))
+            print(f'{clientStatement} {clientStatement.confidence}')
+            print()
 
         except(KeyboardInterrupt, EOFError, SystemExit):
             break
