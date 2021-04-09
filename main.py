@@ -17,14 +17,13 @@ class Bot(ChatBot):
 
     def clearArticle(self, statement: str) -> str:
         if 'O' in statement[0].upper():
-            statement = statement.replace(statement[0], '')
+            statement = statement.replace('O', '', 1)
             print(f'{statement[0].upper()} {statement}')
         else:
             if 'Guilherme' in statement:
                 i = statement.index('Guilherme')
-                print(i)
                 if statement[i-1] == 'o':
-                    statement = statement.replace('o', '')
+                    statement = statement.replace('o', '', 1)
         return statement
 
     def clearStatement(self, statement: str) -> str:

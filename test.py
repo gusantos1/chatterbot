@@ -1,13 +1,5 @@
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+a = 'OguilhermOe'
 
-bot = ChatBot('Oi')
-
-lista = [
-    'testando',
-    'flamengo'
-]
-
-trainer = ListTrainer(bot)
-
-print(trainer.train(lista))
+a = a.replace('O', '', 1)
+print(a)
+str.
