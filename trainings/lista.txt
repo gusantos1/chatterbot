@@ -1,0 +1,16 @@
+Guilherme
+Guilherme é carioca, tem 28 anos e cursa Ciências Matemáticas na UFRJ. Ele é desenvolvedor back-end e mantém seus estudos inclinado para full stack.
+Guilhermetrabalha
+Atualmente Guilherme é Estagiário no PRODERJ (Centro de Tecnologia de Informação e Comunicação do Estado do Rio de Janeiro).
+Guilhermecasado
+Guilherme não é casado, mas tem namorada.
+Guilhermepython
+Python foi a primeira linguagem que ele teve contato, desde então, seu aperfeiçoamento vem sendo constante; inclusive para minha implementação.
+Guilhermelinguagempro
+Guilherme tem experiência com várias tecnologias, sendo as principais: Python, Javascript, Django,
+voc
+Eu sou um chatbot criado pelo Guilherme. Mas especificamente, uma aplicação do framework Chatterbot.
+Guilhermemora
+Na Zona sul, no Rio de Janeiro.
+Guilhermegithub
+Tem sim, https://github.com/gusantos1
