@@ -16,15 +16,18 @@ class Bot(ChatBot):
     ############################# FILTERS STATEMENT ##############################
 
     def clearArticle(self, statement: str) -> str:
+        statement = [letter for letter in statement]
+        print(statement)
         if 'O' in statement[0].upper():
-            statement = statement.replace('O', '', 1)
-            print(f'{statement[0].upper()} {statement}')
-        else:
-            if 'Guilherme' in statement:
-                i = statement.index('Guilherme')
-                if statement[i-1] == 'o':
-                    statement = statement.replace('o', '', 1)
-        return statement
+            del statement[0]
+        if 'G' in statement:
+            i = statement.index('G')
+            if statement[i-1] == 'o':
+                print(f'aqui: {statement[i-1]}')
+                del statement[i-1]
+        print(statement)
+
+        return ''.join(statement)
 
     def clearStatement(self, statement: str) -> str:
         with open(f'trainings/wordsRemoved.txt', 'r') as _file:
@@ -52,14 +55,13 @@ class Bot(ChatBot):
     ############################# FILTERS STATEMENT ##############################
 
     def filterStatement(self, statement: str) -> str:
-        print(f"bot-s: { self.clearArticle(self.searchReplaceGuilherme(self.clearStatement(self.removeSpecialCharacters(statement))))}")
         return self.clearArticle(self.searchReplaceGuilherme(self.clearStatement(self.removeSpecialCharacters(statement))))
 
 
 if __name__ == '__main__':
     serverBot = Bot(
         name='ServerBot',
-        read_only=False,
+        read_only=True,
         preprocessors=[
                 'chatterbot.preprocessors.clean_whitespace',
                 'chatterbot.preprocessors.convert_to_ascii',
@@ -72,7 +74,7 @@ if __name__ == '__main__':
             },
         ],
     )
-    serverBot.listTraining('lista')
+    #serverBot.listTraining('lista')
     print('Olá, eu sou o chatbot.')
     while True:
         try:

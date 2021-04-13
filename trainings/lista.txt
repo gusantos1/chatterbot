@@ -6,11 +6,15 @@ Guilhermecasado
 Guilherme não é casado, mas tem namorada.
 Guilhermepython
 Python foi a primeira linguagem que ele teve contato, desde então, seu aperfeiçoamento vem sendo constante; inclusive para minha implementação.
-Guilhermelinguagempro
+Guilhermelinguagemprograma
 Guilherme tem experiência com várias tecnologias, sendo as principais: Python, Javascript, Django,
-voc
+voce
 Eu sou um chatbot criado pelo Guilherme. Mas especificamente, uma aplicação do framework Chatterbot.
 Guilhermemora
 Na Zona sul, no Rio de Janeiro.
+moraGuilherme
+Na Zona sul, no Rio de Janeiro.
 Guilhermegithub
+Tem sim, https://github.com/gusantos1
+githubGuilherme
 Tem sim, https://github.com/gusantos1
