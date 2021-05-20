@@ -17,15 +17,12 @@ class Bot(ChatBot):
 
     def clearArticle(self, statement: str) -> str:
         statement = [letter for letter in statement]
-        print(statement)
         if 'O' in statement[0].upper():
             del statement[0]
         if 'G' in statement:
             i = statement.index('G')
             if statement[i-1] == 'o':
-                print(f'aqui: {statement[i-1]}')
                 del statement[i-1]
-        print(statement)
 
         return ''.join(statement)
 
